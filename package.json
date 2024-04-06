@@ -1,0 +1,36 @@
+{
+  "name": "bldbnk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "homepage": "https://riazalamgilgiti12.github.io/Bllodbank-app",
+  
+  "scripts": {
+    
+    "start": "node server.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION = false npm install --prefix client && npm run build --prefix client ",
+
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm start\" \"npm run client\"",
+    "build": "npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "color": "^4.2.3",
+    "colors": "^1.4.0",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.0.3",
+    "react-scripts": "^5.0.1"
+  }
+}
